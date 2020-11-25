@@ -19,9 +19,9 @@ namespace ArraysAndListsTest
         [TestMethod]
         public void NoPostLikes()
         {
-            var actual = ArraysAndLists.ArraysAndLists.FacebookLikes();
+            var result = ArraysAndLists.ArraysAndLists.FacebookLikes();
 
-            actual.Should().BeNullOrEmpty(because: "if no one liked the post, there should be an empty string");
+            result.Should().BeNullOrEmpty(because: "if no one liked the post, result should be an empty string");
         }
 
         [TestMethod]
@@ -29,9 +29,9 @@ namespace ArraysAndListsTest
         {
             var expected = "Jerry liked your post.";
 
-            var actual = ArraysAndLists.ArraysAndLists.FacebookLikes("Jerry");
+            var result = ArraysAndLists.ArraysAndLists.FacebookLikes("Jerry");
 
-            actual.Should().Be(expected, because: "it should return '[Name] liked your post'");
+            result.Should().Be(expected, because: "result should be '[Name] liked your post'");
         }
 
         [TestMethod]
@@ -39,9 +39,9 @@ namespace ArraysAndListsTest
         {
             var expected = "Jerry and Sammy liked your post.";
 
-            var actual = ArraysAndLists.ArraysAndLists.FacebookLikes("Jerry", "Sammy");
+            var result = ArraysAndLists.ArraysAndLists.FacebookLikes("Jerry", "Sammy");
 
-            actual.Should().Be(expected, because: "it should return '[Name 1] and [Name 2] liked your post'");
+            result.Should().Be(expected, because: "result should be '[Name 1] and [Name 2] liked your post'");
         }
 
         [TestMethod]
@@ -49,9 +49,9 @@ namespace ArraysAndListsTest
         {
             var expected = "Jerry, Sammy and 2 others liked your post.";
 
-            var actual = ArraysAndLists.ArraysAndLists.FacebookLikes("Jerry", "Sammy", "Tommy", "Rick");
+            var result = ArraysAndLists.ArraysAndLists.FacebookLikes("Jerry", "Sammy", "Tommy", "Rick");
 
-            actual.Should().Be(expected, because: "it should return '[Name 1], [Name 2] and [number of other people] others liked your post'");
+            result.Should().Be(expected, because: "result should be '[Name 1], [Name 2] and [number of other people] others liked your post'");
         }
     }
 
@@ -66,9 +66,9 @@ namespace ArraysAndListsTest
         {
             var expected = "Error";
 
-            var actual = ArraysAndLists.ArraysAndLists.NumberSorter(5, 5, 1, 9);
+            var result = ArraysAndLists.ArraysAndLists.NumberSorter(5, 5, 1, 9);
 
-            actual.Should().Be(expected, because: "it should return return 'Error' if duplicates are found");
+            result.Should().Be(expected, because: "result should be 'Error' if duplicates are found");
         }
 
         [TestMethod]
@@ -76,9 +76,9 @@ namespace ArraysAndListsTest
         {
             var expected = "1 2 7 18 31";
 
-            var actual = ArraysAndLists.ArraysAndLists.NumberSorter(1, 31, 2, 7, 18);
+            var result = ArraysAndLists.ArraysAndLists.NumberSorter(1, 31, 2, 7, 18);
 
-            actual.Should().Be(expected, because: "it should return the passed numbers in ascending order");
+            result.Should().Be(expected, because: "result should be the passed numbers in ascending order");
         }
     }
 
@@ -93,9 +93,9 @@ namespace ArraysAndListsTest
         {
             var expected = "Error";
 
-            var actual = ArraysAndLists.ArraysAndLists.ReverseName(string.Empty);
+            var result = ArraysAndLists.ArraysAndLists.ReverseName(string.Empty);
 
-            actual.Should().Be(expected, because: "it should return 'Error' if empty string is passed");
+            result.Should().Be(expected, because: "result should be 'Error' if empty string is passed");
         }
 
         [TestMethod]
@@ -103,9 +103,9 @@ namespace ArraysAndListsTest
         {
             var expected = "llih eht pu nar god ehT";
 
-            var actual = ArraysAndLists.ArraysAndLists.ReverseName("The dog ran up the hill");
+            var result = ArraysAndLists.ArraysAndLists.ReverseName("The dog ran up the hill");
 
-            actual.Should().Be(expected, because: "it should properly reverse the passed input");
+            result.Should().Be(expected, because: "result should properly reverse the passed input");
 
         }
     }
@@ -121,9 +121,9 @@ namespace ArraysAndListsTest
         {
             var expected = "Invalid Array";
 
-            var actual = ArraysAndLists.ArraysAndLists.SmallestNumbers();
+            var result = ArraysAndLists.ArraysAndLists.SmallestNumbers();
 
-            actual.Should().Be(expected, because: "it should return 'Invalid Array' for an empty array");
+            result.Should().Be(expected, because: "result should be 'Invalid Array' for an empty array");
         }
 
         [TestMethod]
@@ -131,7 +131,7 @@ namespace ArraysAndListsTest
         {
             var expected = "Invalid Array";
 
-            var actual = new[]
+            var result = new[]
                          {
                              ArraysAndLists.ArraysAndLists.SmallestNumbers(1),
                              ArraysAndLists.ArraysAndLists.SmallestNumbers(1, 2),
@@ -139,8 +139,8 @@ namespace ArraysAndListsTest
                              ArraysAndLists.ArraysAndLists.SmallestNumbers(5, 5, 1, 9)
                          };
 
-            actual.Should().Contain(expected,
-                because: "it should return 'Invalid Array' if input array has less than 5 integers");
+            result.Should().Contain(expected,
+                because: "result should be 'Invalid Array' if input array has less than 5 integers");
         }
 
 
@@ -149,9 +149,9 @@ namespace ArraysAndListsTest
         {
             var expected = "6 8 10";
 
-            var actual = ArraysAndLists.ArraysAndLists.SmallestNumbers(8, 10, 46, 84, 6);
+            var result = ArraysAndLists.ArraysAndLists.SmallestNumbers(8, 10, 46, 84, 6);
 
-            actual.Should().Be(expected, because: "it should allow a array of size 5 to be processed");
+            result.Should().Be(expected, because: "result should allow a array of size 5 to be processed");
         }
 
         [TestMethod]
@@ -159,9 +159,9 @@ namespace ArraysAndListsTest
         {
             var expected = "1 1 4";
 
-            var actual = ArraysAndLists.ArraysAndLists.SmallestNumbers(1, 1, 4, 68, 57, 5);
+            var result = ArraysAndLists.ArraysAndLists.SmallestNumbers(1, 1, 4, 68, 57, 5);
 
-            actual.Should().Be(expected, because: "it should return the 3 smallest integers, even if they are duplicates");
+            result.Should().Be(expected, because: "result should be the 3 smallest integers, even if they are duplicates");
         }
 
 
@@ -170,9 +170,9 @@ namespace ArraysAndListsTest
         {
             var expected = "1 2 3";
 
-            var actual = ArraysAndLists.ArraysAndLists.SmallestNumbers(7, 16, 2, 3, 9, 48, 1, 97, 34);
+            var result = ArraysAndLists.ArraysAndLists.SmallestNumbers(7, 16, 2, 3, 9, 48, 1, 97, 34);
 
-            actual.Should().Be(expected, because: "it should return the 3 smallest numbers in ascending order");
+            result.Should().Be(expected, because: "result should be the 3 smallest numbers in ascending order");
         }
     }
 
@@ -185,25 +185,25 @@ namespace ArraysAndListsTest
         [TestMethod]
         public void OnlyDistinctNumbers()
         {
-            var actual = ArraysAndLists.ArraysAndLists.UniqueNumbers(5, 5, 1, 9, 9);
+            var result = ArraysAndLists.ArraysAndLists.UniqueNumbers(5, 5, 1, 9, 9);
 
-            actual.Should().OnlyHaveUniqueItems(because: "it should only return the unique numbers with no duplicates");
+            result.Should().OnlyHaveUniqueItems(because: "result should only be the unique numbers with no duplicates");
         }
 
         [TestMethod]
         public void InAscendingOrder()
         {
-            var actual = ArraysAndLists.ArraysAndLists.UniqueNumbers(6, 9, 3);
+            var result = ArraysAndLists.ArraysAndLists.UniqueNumbers(6, 9, 3);
 
-            actual.Should().BeInAscendingOrder(because: "it should order the integers in ascending order");
+            result.Should().BeInAscendingOrder(because: "result should order the integers in ascending order");
         }
 
         [TestMethod]
         public void OnlyDuplicates()
         {
-            var actual = ArraysAndLists.ArraysAndLists.UniqueNumbers(15, 15, 15, 15);
+            var result = ArraysAndLists.ArraysAndLists.UniqueNumbers(15, 15, 15, 15);
 
-            actual.Should().HaveCount(1, because: "it should return a singular number if all the inputs are the same.");
+            result.Should().HaveCount(1, because: "result should be a singular number if all the inputs are the same.");
         }
     }
 }

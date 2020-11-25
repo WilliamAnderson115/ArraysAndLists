@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Linq;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 
 namespace ArraysAndLists
 {
@@ -18,16 +19,18 @@ namespace ArraysAndLists
         // If more than two people like your post, it returns: "[Friend 1], [Friend 2] and [Number of Other People] others liked your post."
         public static string FacebookLikes(params string[] names)
         {
-            // Delete the below line when you are writing your code
+            // Delete the below line when you are writing your code, don't forget to use your
+            // own return statement.
             return default;
         }
 
         // 2 - Write a method that accepts any number of integers (minimum of two integers). If an
         // integer is a duplicate, return "Error". If all integers are unique, then order them in
-        // ascending order and return the sorted result as a string of integers seperated by spaces.
+        // ascending order and return the sorted result as a string of integers separated by spaces.
         public static string NumberSorter(params int[] numbers)
         {
-            // Delete the below line when you are writing your code
+            // Delete the below line when you are writing your code, don't forget to use your
+            // own return statement.
             return default;
         }
 
@@ -36,25 +39,28 @@ namespace ArraysAndLists
         // "Error" if no text is inputted.
         public static string ReverseName(string name)
         {
-            // Delete the below line when you are writing your code
+            // Delete the below line when you are writing your code, don't forget to use your
+            // own return statement.
             return default;
         }
 
         // 4 - Write a method that accepts any number of integers. If none or less than 5 numbers,
-        // return "Invalid Array"; otherwise, return the 3 smallest numbers as a string seperated by
+        // return "Invalid Array"; otherwise, return the 3 smallest numbers as a string separated by
         // spaces, sorted in ascending order. Treat duplicate numbers normally.
         public static string SmallestNumbers(params int[] numbers)
         {
-            // Delete the below line when you are writing your code
+            // Delete the below line when you are writing your code, don't forget to use your
+            // own return statement.
             return default;
         }
 
         // 5 - Write a method that accepts any number of numbers (assume at least two numbers). The numbers
         // may include duplicates. Return the distinct numbers as an array sorted by ascending order.
-        // So for example, an array consisting of [2, 2, 1, 3] should return [1, 2, 3].
+        // So for example, an array consisting of [2, 2, 1, 3] should return an integer array of {1, 2, 3}. 
         public static int[] UniqueNumbers(params int[] numbers)
         {
-            // Delete the below line when you are writing your code
+            // Delete the below line when you are writing your code, don't forget to use your
+            // own return statement.
             return default;
         }
 
