@@ -164,7 +164,6 @@ namespace ArraysAndListsTest
             result.Should().Be(expected, because: "result should be the 3 smallest integers, even if they are duplicates");
         }
 
-
         [TestMethod]
         public void InAscendingOrder()
         {
@@ -183,11 +182,13 @@ namespace ArraysAndListsTest
     public class UniqueNumbersTest
     {
         [TestMethod]
-        public void OnlyDistinctNumbers()
+        public void CorrectDistinctNumbers()
         {
-            var result = ArraysAndLists.ArraysAndLists.UniqueNumbers(5, 5, 1, 9, 9);
+            var result = ArraysAndLists.ArraysAndLists.UniqueNumbers(1, 2, 5, 5, 3, 3, 3, 7, 8);
 
-            result.Should().OnlyHaveUniqueItems(because: "result should only be the unique numbers with no duplicates");
+            var expected = new[] { 1, 2, 3, 5, 7, 8 };
+
+            result.Should().BeEquivalentTo(expected, because: "result should correctly return the expected strings");
         }
 
         [TestMethod]
