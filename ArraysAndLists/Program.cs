@@ -56,7 +56,7 @@ namespace ArraysAndLists
 
         // 5 - Add to the method below that accepts any number of numbers (assume at least two numbers). The numbers
         // may include duplicates. Return the distinct numbers as an array sorted by ascending order.
-        // So for example, an array consisting of [2, 2, 1, 3] should return an integer array of {1, 2, 3}. 
+        // So for example, an array consisting of [2, 2, 1, 3] should return an integer array of [1, 2, 3]. 
         public static int[] UniqueNumbers(params int[] numbers)
         {
             // Delete the below line when you are writing your code, don't forget to use your
